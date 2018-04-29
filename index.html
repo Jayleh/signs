@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Signs</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
       crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    <title>Signs</title>
   </head>
 
   <body>
@@ -28,7 +28,20 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <table class="table table-hover">
+            <form>
+              <div class="form-group">
+                <label for="searchDate">Search Date</label>
+                <input type="text" id="searchDate" class="form-control" onkeyup="myFunction()" placeholder="Enter date">
+                <small id="dateHelp" class="form-text text-muted">M/D/YYYY</small>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <table class="table table-sm table-hover">
               <thead>
                 <tr>
                   <th>Date</th>
@@ -36,7 +49,7 @@
                   <th>State</th>
                   <th>Country</th>
                   <th>Shape</th>
-                  <th>Duration (minutes)</th>
+                  <th>Duration</th>
                   <th>Comments</th>
                 </tr>
               </thead>
@@ -46,7 +59,30 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </main>
+
+
 
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
