@@ -30,8 +30,7 @@ function renderTable() {
 
 }
 
-
-function myFunction() {
+function filterDate() {
     let $input, filter, $table, $tr;
 
     $input = document.querySelector("#searchDate");
@@ -52,6 +51,5 @@ function myFunction() {
         }
     }
 }
-
 
 renderTable();
