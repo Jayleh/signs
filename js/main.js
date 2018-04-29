@@ -53,3 +53,39 @@ function filterDate() {
 }
 
 renderTable();
+
+// jQuery for pagination
+$(document).ready(() => {
+
+    let $table = document.querySelector('table');
+
+    $('.pagination li').html();
+    let trNum = 0;
+    let maxRows = 50;
+    let totalRows = $(`${table} tbody tr`).length;
+
+    $(`${table} tr:gt(0)`).each(() => {
+        trNum++;
+        if (trNum > maxRows) {
+            $(this).hide();
+        }
+        else if (trNum <= maxRows) {
+            $(this).show();
+        }
+    });
+
+    if (totalRows > maxRows) {
+        let pageNum = Math.ceil(totalRows / maxRows);
+        for (let i = 1; i <= pageNum;) {
+            $('#previous-btn').append(`<li data-page="${i}"><span>${i++}<span class="sr-only">(curent)</span></span></li>`).show();
+        }
+    }
+
+
+
+
+
+
+
+
+})
